@@ -65,7 +65,7 @@ Author | [char(30)]
 If you do not want to save pastes, set USE_DB to False
 
 ## Executing pastebin_scraper
-        python pastebin_scraper.py
+        python3 pastebin_scraper.py
 
 ## Disclaimer
 This script was developed for educational purposes only. Critical Start is not responsible for any malicious use of the data collected by it. Moral of the story... don't do anything dumb.
