@@ -31,7 +31,7 @@ This tool was heavily influenced by [dumpmon](http://www.github.com/jordan-wrigh
 1. Set up a MySQL database with whatever name you want, add a user with write permissions for that db for the bot.
 2. Use this command to create the table with the correct attributes:
 
-    > create table pastes (pid char(10), text longblob, emails longblob, hashes longblob, num_emails int, num_hashes int, type char(10), db_keywords float, url char(50), author char(30));
+    > create table pastes (pid char(10), text longblob, emails longblob, hashes longblob, num_emails int, num_hashes int, type char(10), db_keywords float, url char(60), author char(30));
 
 This creates a table named *pastes* with the following attributes:
 
@@ -45,7 +45,7 @@ num_emails | [int]
 num_hashes | [int]
 type | [char(10)]
 db_keywords |[float]
-URL | [varchar(50)]
+URL | [varchar(60)]
 Author | [char(30)]
 3. rename settings_examply.py to settings.py and update with the proper attributes
     pastebin_scraper can save pastes using MySQL.
