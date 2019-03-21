@@ -77,8 +77,10 @@ class Site(object):
                     logging.info('[*] FOUND ' + (paste.type).upper() + ' ' +  paste.url)
                     if USE_DB:
                         cursor = self.db_client.cursor()
-                        cursor.execute("INSERT INTO pastes (pid, text, emails, hashes, num_emails, num_hashes, type, db_keywords, url, author) VALUES (\""+str(paste.id)+"\",\""+str(paste.text)+"\",\""+str(paste.emails)+"\",\""+str(paste.hashes)+"\",\""+str(paste.num_emails)+"\",\""+str(paste.num_hashes)+"\",\""+str(paste.type)+"\",\""+str(paste.db_keywords)+"\",\""+str(paste.url)+"\",\""+str(paste.author)+"\")")
-
+                        try:
+                            cursor.execute("INSERT INTO pastes (pid, text, emails, hashes, num_emails, num_hashes, type, db_keywords, url, author) VALUES (\""+str(paste.id)+"\",\""+str(paste.text)+"\",\""+str(paste.emails)+"\",\""+str(paste.hashes)+"\",\""+str(paste.num_emails)+"\",\""+str(paste.num_hashes)+"\",\""+str(paste.type)+"\",\""+str(paste.db_keywords)+"\",\""+str("https://pastebin.com/"+paste.id)+"\",\""+str(paste.author)+"\")")
+                        except:
+                            logging.info('[*] ERROR: Failed to save paste. Manual review: ' + paste.url)
             self.update()
             while self.empty():
                 logging.debug('[*] No results... sleeping')
