@@ -42,7 +42,8 @@ class Pastebin(Site):
                 raw = None
                 sleep(5)
         # import API result as JSON
-        raw_json = json.load(raw)
+        decoded = raw.read().decode('utf-8')
+        raw_json = json.loads(decoded)
         #parse json to get keys
         results = []
         #populate results list with paste_ids
