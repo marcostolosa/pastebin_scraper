@@ -52,7 +52,7 @@ def monitor():
         while(1):
             sleep(5)
     except KeyboardInterrupt:
-        logging.warn('Stopped.')
+        logging.warning('Stopped.')
 
 
 if __name__ == "__main__":
