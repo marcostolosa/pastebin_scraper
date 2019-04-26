@@ -64,7 +64,7 @@ Author | [char(30)]
 
 If you do not want to save pastes, set USE_DB to False
 
-## Executing pastebin_scraper
+## Executing pastebin_scraper (REQUIRES PASTEBIN PRO ACCOUNT)
         python3 pastebin_scraper.py
 
 ## Disclaimer

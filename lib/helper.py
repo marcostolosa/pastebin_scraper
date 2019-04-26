@@ -12,9 +12,9 @@ def download(url, headers=None):
     try:
         response = r.get(url).text
     except requests.ConnectionError:
-        logging.warn('[!] Critical Error - Cannot connect to site')
+        logging.warning('[!] Critical Error - Cannot connect to site')
         sleep(5)
-        logging.warn('[!] Retrying...')
+        logging.warning('[!] Retrying...')
         response = download(url)
     return response
 
