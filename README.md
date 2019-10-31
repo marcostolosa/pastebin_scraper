@@ -28,10 +28,11 @@ This tool was heavily influenced by [dumpmon](http://www.github.com/jordan-wrigh
 
 ## Quickstart Guide
 To get up and running quickly with pastebin_scraper, do the following once you have cloned this repository:
-* cd pastebin_scraper
-* pip3 install -r requirements.txt
-* cp settings_example.py settings.py
-* python3 pastebin_scraper.py
+
+        * cd pastebin_scraper
+        * pip3 install -r requirements.txt
+        * cp settings_example.py settings.py
+        * python3 pastebin_scraper.py
 
 ## Setting up MySQL support
 1. Set up a MySQL database with whatever name you want, add a user with write permissions for that db for the bot.
