@@ -6,7 +6,7 @@
 
 For more overview, check out the blog post [here.](https://www.criticalstart.com/automated-tool-to-monitor-pastebin-for-interesting-information/)
 
-This tool was heavily influenced by [dumpmon](http://www.github.com/jordan-wright/dumpmon). Since that bot is no longer active (as of October 7, 2018), Critical Start - Section 8 has set up our own to continue to monitor Pastebin for data leaks and dumps. In modifying dumpmon, we've also made changes and added features, lsited below. 
+This tool was heavily influenced by [dumpmon](http://www.github.com/jordan-wright/dumpmon). Since that bot is no longer active (as of October 7, 2018), Critical Start - Section 8 has set up our own to continue to monitor Pastebin for data leaks and dumps. In modifying dumpmon, we've also made changes and added features, listed below. 
 
 
 ## Changes made
@@ -15,7 +15,7 @@ This tool was heavily influenced by [dumpmon](http://www.github.com/jordan-wrigh
     * updated modified Queue library
     * added line to __init__.py to allow fix relative imports.
 * removed slexy/pastie sites because they are no longer active
-* removed all twitter componenents, this is not a feature we needed or will use
+* removed all twitter components, this is not a feature we needed or will use
     * changed references to 'tweet' since we aren't tweeting
 * changed logging
     * logs when interesting pastes are found, and what type
@@ -26,6 +26,13 @@ This tool was heavily influenced by [dumpmon](http://www.github.com/jordan-wrigh
 * removed redundant code in lib/Site.py and lib/(paste sites).py
 * changed mongodb to MySQL 
 
+## Quickstart Guide
+To get up and running quickly with pastebin_scraper, do the following once you have cloned this repository:
+
+        * cd pastebin_scraper
+        * pip3 install -r requirements.txt
+        * cp settings_example.py settings.py
+        * python3 pastebin_scraper.py
 
 ## Setting up MySQL support
 1. Set up a MySQL database with whatever name you want, add a user with write permissions for that db for the bot.
@@ -47,7 +54,7 @@ type | [char(10)]
 db_keywords |[float]
 URL | [varchar(60)]
 Author | [char(30)]
-3. rename settings_examply.py to settings.py and update with the proper attributes
+3. rename settings_example.py to settings.py and update with the proper attributes
     pastebin_scraper can save pastes using MySQL.
 
         USE_DB = True
